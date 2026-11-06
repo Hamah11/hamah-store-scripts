@@ -6,7 +6,7 @@ function findInput(){var ins=document.querySelectorAll('input[type=file]');for(v
 function toWav(ab){var d=ab.getChannelData(0),sr=ab.sampleRate,tr=16000,ratio=sr/tr,n=Math.floor(d.length/ratio),out=new Int16Array(n);for(var i=0;i<n;i++){var s=Math.floor(i*ratio),e=Math.min(d.length,Math.floor((i+1)*ratio)),sum=0,c=0;for(var j=s;j<e;j++){sum+=d[j];c++;}var v=c?sum/c:0;v=Math.max(-1,Math.min(1,v));out[i]=v<0?v*32768:v*32767;}var buf=new ArrayBuffer(44+n*2),dv=new DataView(buf);function w(o,t){for(var q=0;q<t.length;q++)dv.setUint8(o+q,t.charCodeAt(q));}w(0,'RIFF');dv.setUint32(4,36+n*2,true);w(8,'WAVE');w(12,'fmt ');dv.setUint32(16,16,true);dv.setUint16(20,1,true);dv.setUint16(22,1,true);dv.setUint32(24,tr,true);dv.setUint32(28,tr*2,true);dv.setUint16(32,2,true);dv.setUint16(34,16,true);w(36,'data');dv.setUint32(40,n*2,true);for(var m=0;m<n;m++)dv.setInt16(44+m*2,out[m],true);return new Blob([buf],{type:'audio/wav'});}
 function build(el){
 el.dataset.vr='1';
-var wrap=document.createElement('div');wrap.style.cssText='margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center';
+var wrap=document.createElement('div');wrap.style.cssText='margin-top:12px;display:flex;flex-direction:column;gap:10px;align-items:flex-start';
 var btn=document.createElement('button');btn.type='button';btn.style.cssText='background:#0E6B58;color:#fff;border:0;border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer';btn.textContent='🎙️ سجّل الاسم بصوتك';
 var msg=document.createElement('span');msg.style.cssText='font-size:13px;color:#4b5563';
 var audio=document.createElement('audio');audio.controls=true;audio.style.cssText='display:none;max-width:100%';
