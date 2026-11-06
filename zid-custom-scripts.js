@@ -37,7 +37,7 @@ var iv=setInterval(function(){tries++;try{var el=findInput();if(el){build(el);cl
 (function(){
 if(document.URL.indexOf('/products/')===-1)return;
 function rad(){
-var els=document.querySelectorAll('td,span,div,p');
+var els=document.querySelectorAll('td,span,strong,b,div,p');
 for(var i=0;i!==els.length;i++){
 var e=els[i];var cs=getComputedStyle(e);var bg=cs.backgroundColor;
 if(bg==='rgb(223, 243, 230)'||bg==='rgb(18, 140, 92)'){e.style.borderRadius='999px';continue;}
@@ -54,4 +54,4 @@ e.style.borderRadius=(bg==='rgb(245, 248, 253)')?'18px 18px 0px 0px':r+'px';
 }
 var n=0;var iv=setInterval(function(){n++;try{rad();}catch(e){}if(n===6)clearInterval(iv);},800);
 })();
-var hv=3;
+var hv=4;
