@@ -8,9 +8,11 @@ function build(el){
 el.dataset.vr='1';
 var wrap=document.createElement('div');wrap.style.cssText='margin-top:12px;display:flex;flex-direction:column;gap:10px;align-items:flex-start';
 var btn=document.createElement('button');btn.type='button';btn.style.cssText='background:#0E6B58;color:#fff;border:0;border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer';btn.textContent='🎙️ سجّل الاسم بصوتك';
+var uploadBtn=document.createElement('label');uploadBtn.style.cssText='display:inline-block;background:#6b7280;color:#fff;border:0;border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;margin-top:4px';uploadBtn.textContent='📂 أو اختر الصوت من جهازك';uploadBtn.appendChild(el);
 var msg=document.createElement('span');msg.style.cssText='font-size:13px;color:#4b5563';
 var audio=document.createElement('audio');audio.controls=true;audio.style.cssText='display:none;max-width:100%';
-wrap.appendChild(btn);wrap.appendChild(msg);wrap.appendChild(audio);
+wrap.appendChild(btn);wrap.appendChild(uploadBtn);wrap.appendChild(msg);wrap.appendChild(audio);
+el.style.cssText='display:none';
 el.parentNode.insertBefore(wrap,el.nextSibling);
 var rec=null,chunks=[],stream=null,timer=null,sec=0,MAX=30;
 function stopAll(){if(timer){clearInterval(timer);timer=null;}if(stream){stream.getTracks().forEach(function(t){t.stop();});stream=null;}}
