@@ -34,4 +34,24 @@ timer=setInterval(function(){sec++;msg.textContent='\u062c\u0627\u0631\u064d \u0
 }
 var iv=setInterval(function(){tries++;try{var el=findInput();if(el){build(el);clearInterval(iv);}}catch(e){}if(tries===25)clearInterval(iv);},700);
 })();
-var hv=2;
+(function(){
+if(document.URL.indexOf('/products/')===-1)return;
+function rad(){
+var els=document.querySelectorAll('td,span,div,p');
+for(var i=0;i!==els.length;i++){
+var e=els[i];var cs=getComputedStyle(e);var bg=cs.backgroundColor;
+if(bg==='rgb(223, 243, 230)'||bg==='rgb(18, 140, 92)'){e.style.borderRadius='999px';continue;}
+if(e.tagName!=='TD')continue;
+var r=0;
+if(bg==='rgb(14, 107, 88)')r=14;
+else if(bg==='rgb(245, 248, 253)')r=18;
+else if(cs.borderTopStyle!=='none'&&cs.borderTopColor==='rgb(234, 240, 237)')r=18;
+if(r===0)continue;
+var tb=e.closest('table');if(!tb)continue;
+tb.style.borderCollapse='separate';tb.style.borderSpacing='0';tb.style.borderRadius=r+'px';tb.style.overflow='hidden';
+e.style.borderRadius=(bg==='rgb(245, 248, 253)')?'18px 18px 0px 0px':r+'px';
+}
+}
+var n=0;var iv=setInterval(function(){n++;try{rad();}catch(e){}if(n===6)clearInterval(iv);},800);
+})();
+var hv=3;
