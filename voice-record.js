@@ -36,16 +36,21 @@ var iv=setInterval(function(){tries++;try{var el=findInput();if(el){build(el);cl
 })();
 (function(){
 if(document.URL.indexOf('/products/')===-1)return;
+function setIf(e,p,v){if(!e.style[p])e.style[p]=v;}
+function pill(e,pad){setIf(e,'display','inline-block');setIf(e,'lineHeight','1.6');setIf(e,'padding',pad);setIf(e,'textAlign','center');e.style.borderRadius='999px';}
 function rad(){
-var els=document.querySelectorAll('td,span,strong,b,div,p');
+var ps=document.querySelectorAll('p');
+for(var k=0;k!==ps.length;k++){var t=(ps[k].textContent||'').trim();if(t.indexOf('document.addEventListener')===0)ps[k].style.display='none';}
+var els=document.querySelectorAll('td,span,strong,b,div');
 for(var i=0;i!==els.length;i++){
 var e=els[i];var cs=getComputedStyle(e);var bg=cs.backgroundColor;
-if(bg==='rgb(223, 243, 230)'||bg==='rgb(18, 140, 92)'){e.style.borderRadius='999px';continue;}
+if(bg==='rgb(223, 243, 230)'){pill(e,'6px clamp(7px, 1.5vw, 10px)');continue;}
+if(bg==='rgb(18, 140, 92)'){pill(e,'clamp(3px, 0.8vw, 5px) clamp(6px, 1vw, 9px)');setIf(e,'color','#ffffff');continue;}
 if(e.tagName!=='TD')continue;
 var r=0;
-if(bg==='rgb(14, 107, 88)')r=14;
-else if(bg==='rgb(245, 248, 253)')r=18;
-else if(cs.borderTopStyle!=='none'&&cs.borderTopColor==='rgb(234, 240, 237)')r=18;
+if(bg==='rgb(14, 107, 88)'){r=14;setIf(e,'padding','14px 12px');setIf(e,'textAlign','center');}
+else if(bg==='rgb(245, 248, 253)'){r=18;setIf(e,'padding','6px 16px');}
+else if(cs.borderTopStyle!=='none'&&cs.borderTopColor==='rgb(234, 240, 237)'){r=18;setIf(e,'padding','12px 18px');}
 if(r===0)continue;
 var tb=e.closest('table');if(!tb)continue;
 tb.style.borderCollapse='separate';tb.style.borderSpacing='0';tb.style.borderRadius=r+'px';tb.style.overflow='hidden';
@@ -54,4 +59,4 @@ e.style.borderRadius=(bg==='rgb(245, 248, 253)')?'18px 18px 0px 0px':r+'px';
 }
 var n=0;var iv=setInterval(function(){n++;try{rad();}catch(e){}if(n===6)clearInterval(iv);},800);
 })();
-var hv=4;
+var hv=5;
