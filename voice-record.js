@@ -12,9 +12,9 @@ var uploadBtn=document.createElement('label');uploadBtn.style.cssText='display:i
 var msg=document.createElement('span');msg.style.cssText='font-size:13px;color:#4b5563';
 var audio=document.createElement('audio');audio.controls=true;audio.style.cssText='display:none;max-width:100%';
 wrap.appendChild(btn);wrap.appendChild(uploadBtn);wrap.appendChild(msg);wrap.appendChild(audio);
-el.style.cssText='display:none';
 var parent=el.parentNode;parent.insertBefore(wrap,el.nextSibling);
 uploadBtn.appendChild(el);
+el.style.cssText='position:absolute;width:1px;height:1px;opacity:0;overflow:hidden';
 var rec=null,chunks=[],stream=null,timer=null,sec=0,MAX=30;
 function stopAll(){if(timer){clearInterval(timer);timer=null;}if(stream){stream.getTracks().forEach(function(t){t.stop();});stream=null;}}
 function put(file){var dt=new DataTransfer();dt.items.add(file);el.files=dt.files;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));audio.src=URL.createObjectURL(file);audio.style.display='block';msg.textContent='تم التسجيل ✓ يمكنك سماعه، أو إعادة التسجيل.';}
