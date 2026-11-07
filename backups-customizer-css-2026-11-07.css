@@ -1,0 +1,132 @@
+
+				@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+div.social-share {
+  display: none !important;
+}
+
+div.social-share.tc {
+    display: none;
+}
+
+
+.sp-single .social-share {
+    margin-top: 20px;
+    display: none;
+}
+
+.page-head,
+.page_head,
+.page-header,
+.breadcrumb-section {
+  background-image: url("https://media.zid.store/a2fcf162-43b5-476a-bdf9-09216baee072/75cb50a8-619f-4452-9458-7cd95bcc28eb.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+
+/* 1. TOP GOV BAR FOR HOME & ALL INTERNAL PAGES */
+header, #ntheader, .kalles-section-header_banner, #kalles-section-header_banner { position: relative !important; display: flex !important; flex-direction: column !important; height: auto !important; }
+header::before, #ntheader::before, .kalles-section-header_banner::before, #kalles-section-header_banner::before { content: "🇸🇦 موقع رسمي تابع لجهة أهلية مسجلة بالمملكة العربية السعودية  |  كيف تتحقق؟ ▲" !important; display: block !important; background-color: #f4f4f4 !important; color: #007a3d !important; text-align: center !important; padding: 8px 15px !important; font-size: 13px !important; font-weight: bold !important; direction: rtl !important; border-bottom: 1px solid #e0e0e0 !important; cursor: pointer !important; position: relative !important; z-index: 99999 !important; order: -2 !important; }
+header:hover::before, #ntheader:hover::before, .kalles-section-header_banner:hover::before, #kalles-section-header_banner:hover::before { color: #c9aa77 !important; transition: color 0.2s ease-in-out !important; }
+header::after, #ntheader::after, .kalles-section-header_banner::after, #kalles-section-header_banner::after { white-space: pre-wrap !important; display: block !important; width: 100% !important; max-height: 0 !important; overflow: hidden !important; background-color: #fafafa !important; color: #555 !important; direction: rtl !important; border-bottom: 0 solid #e0e0e0 !important; order: -1 !important; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02) !important; z-index: 99991 !important; transition: max-height 0.4s ease-in-out 4s, padding 0.4s ease-in-out 4s, border 0.4s ease-in-out 4s !important; }
+@media (min-width: 769px) {
+    header::after, #ntheader::after, .kalles-section-header_banner::after, #kalles-section-header_banner::after { content: "• روابط المواقع الرسمية الموثوقة تنتهي بنطاقات مسجلة رسمياً مثل (sa.)  |  ✔ تحقق دائماً من وجود رمز القفل الآمن (HTTPS) لحماية بياناتك وتشفيرها. \A • الجمعية مسجلة لدى المركز الوطني لتنمية القطاع غير الربحي برقم  1000688400" !important; font-size: 12px !important; line-height: 2.5 !important; text-align: center !important; padding: 0 30px !important; position: relative !important; }
+    header:hover::after, #ntheader:hover::after, .kalles-section-header_banner:hover::after, #kalles-section-header_banner:hover::after { max-height: 110px !important; padding: 15px 30px !important; background-color: #edf7f1 !important; transition: max-height 0.3s ease-in-out 0s !important; }
+}
+@media (max-width: 768px) {
+    header::before, #ntheader::before, #kalles-section-header_banner::before { font-size: 11px !important; padding: 8px 10px !important; }
+    header::after, #ntheader::after, #kalles-section-header_banner::after { content: "• روابط المواقع الرسمية الموثوقة تنتهي بنطاقات مسجلة (sa.) \A • تحقق دائماً من وجود رمز القفل الآمن (HTTPS) لحماية بيانات \A • الجمعية مسجلة لدى المركز الوطني لتنمية القطاع غير الربحي برقم  1000688400" !important; font-size: 11px !important; padding: 0 15px !important; line-height: 2.0 !important; text-align: right !important; position: relative !important; }
+    header:active::after, #ntheader:active::after, #kalles-section-header_banner:active::after { max-height: 220px !important; padding: 12px 15px !important; background-color: #edf7f1 !important; transition: max-height 0.2s ease-in-out 0s !important; }
+    #nt_menu_canvas { z-index: 999999 !important; background-color: rgba(255, 255, 255, 0.98) !important; }
+    #nt_menu_canvas .nt_mb_menu, #nt_menu_canvas .menu-item, #nt_menu_canvas a { position: relative !important; z-index: 999999 !important; }
+}
+
+/* 2. INNER PAGES GAPS & FIXED TEXT PADDING */
+.page_section_heading ~ div pre, pre { white-space: pre-wrap !important; font-family: 'Almarai', sans-serif !important; margin: 0 !important; padding: 1.2em !important; box-sizing: border-box !important; }
+.n6owBd, [class*="awi2gc"] { display: block !important; visibility: visible !important; opacity: 1 !important; line-height: 1.8 !important; }
+.yhAwj, .AHmQrc, .intercom-lightweight-app, .intercom-lightweight-app-launcher, .intercom-launcher, #intercom-container { display: none !important; height: 0 !important; width: 0 !important; font-size: 0 !important; margin: 0 !important; padding: 0 !important; visibility: hidden !important; opacity: 0 !important; }
+
+/* 3. QUICK DONATION FAB - UPDATED TO NEW ROYAL GOLD COLOR */
+.quick-donation-fab { position: fixed !important; bottom: 50% !important; left: 0 !important; z-index: 999999 !important; background: #c9aa77 !important; border: none !important; box-shadow: 0 4px 14px rgba(0,0,0,0.15) !important; cursor: pointer !important; display: inline-flex !important; align-items: center !important; padding: 0 !important; height: 48px !important; border-radius: 0 30px 30px 0 !important; outline: none !important; -webkit-tap-highlight-color: transparent !important; width: 48px !important; white-space: nowrap !important; justify-content: center !important; transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s !important; }
+.quick-donation-fab svg { width: 24px !important; height: 24px !important; min-width: 24px !important; min-height: 24px !important; display: block !important; margin: 0 auto !important; flex-shrink: 0 !important; visibility: visible !important; opacity: 1 !important; }
+.quick-donation-fab__label { font-size: 13px !important; font-weight: bold !important; color: #ffffff !important; margin-right: 0 !important; opacity: 0 !important; display: none !important; }
+@media (min-width: 769px) { .quick-donation-fab:hover { width: 145px !important; padding: 0 16px !important; justify-content: flex-start !important; background: #b0925e !important; } .quick-donation-fab:hover .quick-donation-fab__label { display: inline-block !important; opacity: 1 !important; margin-right: 8px !important; } }
+@media (max-width: 768px) { .quick-donation-fab:active, .quick-donation-fab:focus, .quick-donation-fab:focus-within { width: 135px !important; padding: 0 12px !important; justify-content: flex-start !important; transition: width 0.3s ease-in-out 0s, padding 0.3s ease-in-out 0s !important; background: #b0925e !important; } .quick-donation-fab:active .quick-donation-fab__label, .quick-donation-fab:focus .quick-donation-fab__label, .quick-donation-fab:focus-within .quick-donation-fab__label { display: inline-block !important; opacity: 1 !important; margin-right: 6px !important; transition: opacity 0.2s ease-in-out 0s, margin 0.2s ease-in-out 0s !important; } .quick-donation-fab { transition: width 0.4s ease-in-out 5s, padding 0.4s ease-in-out 5s !important; } }
+
+/* 4. SUPERVISOR ENTITIES & PARTNERS DYNAMIC CENTERING FIX */
+.flickity-slider { transform: translateX(0%) !important; display: flex !important; justify-content: center !important; width: 100% !important; left: 0 !important; }
+.brand_item, [class*="brand_item"] { height: 120px !important; min-height: 120px !important; max-height: 120px !important; padding: 10px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; background: #ffffff !important; box-sizing: border-box !important; position: relative !important; left: 0 !important; margin: 0 10px !important; }
+.brand_item img, [class*="brand_item"] img, .brand_item a img { height: 100px !important; width: auto !important; max-width: 100% !important; object-fit: contain !important; display: block !important; margin: 0 auto !important; visibility: visible !important; opacity: 1 !important; }
+@media (max-width: 768px) { .flickity-slider { flex-wrap: wrap !important; gap: 10px !important; } .brand_item, [class*="brand_item"] { height: 95px !important; padding: 8px !important; margin: 0 !important; } .brand_item img, [class*="brand_item"] img, .brand_item a img { height: 80px !important; } }
+.brand_item a { display: block !important; text-align: center !important; width: 100% !important; }
+
+/* 5. GLOBAL BRAND HOVER LINK CONFIGURATIONS - HOVER TO ROYAL GOLD */
+a:hover, .menu-item a:hover, .footer__top a:hover, #ntheader a:hover { color: #c9aa77 !important; transition: color 0.2s ease-in-out !important; }
+
+/* 6. CONTACT BLOCKS ROW REVERSE FOR PHONE AND EMAIL */
+.kalles-medical__shipping-info-inner > .row { width: 100% !important; }
+@media (min-width: 769px) { .kalles-medical__shipping-info-inner > .row { display: flex !important; flex-direction: row-reverse !important; justify-content: space-between !important; } }
+@media (max-width: 768px) { .kalles-medical__shipping-info-inner > .row { display: flex !important; flex-direction: column-reverse !important; gap: 20px !important; align-items: center !important; } }
+.contact-item i, .contact-item span, .kalles-medical__shipping-info-inner .col-md-4, [class*="kalles-medical__shipping-info-inner"] [class*="col-"] { direction: rtl !important; text-align: center !important; }
+
+/* 7. EXACT COPYRIGHTS ROW FOR ALL PAGES (ETHAR THEME FIX) */
+.footer__bot_wrap .row, .footer__bot .row { font-size: 0 !important; display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important; direction: rtl !important; padding: 10px 20px !important; flex-wrap: wrap !important; }
+.footer__bot_wrap .row > div, .footer__bot .row > div { display: none !important; }
+.footer__bot_wrap .row::before, .footer__bot .row::before { content: "جميع الحقوق محفوظة لجمعية هامة © 2026" !important; font-size: 13px !important; color: #666 !important; display: inline-block !important; }
+.footer__bot_wrap .row::after, .footer__bot .row::after { content: "🏛️ مرخص من المركز الوطني لتنمية القطاع غير الربحي برقم: 1000688400" !important; font-size: 13px !important; color: #666 !important; display: inline-block !important; }
+@media (max-width: 768px) { .footer__bot_wrap .row, .footer__bot .row { flex-direction: column !important; gap: 8px !important; text-align: center !important; } }
+
+/* -------------------- فـاصل ---------------------- */
+
+/* 🟢 توحيد وتوسيط شعار الواتساب بالمنتصف على الشاشات الكبيرة والجوال بالتوازي */
+.whatsappWrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+/* إجبار الأيقونة البيضاء على التمركز البرمجي وإبطال أوامر الإزاحة كلياً */
+.whatsappWrapper img,
+.whatsappWrapper i,
+.whatsappWrapper svg {
+    margin: auto !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    display: block !important;
+}
+
+/* ضبط تناسق وأبعاد الشعار داخل الدائرة على كافة المقاسات */
+@media (min-width: 821px) {
+    .whatsappWrapper img {
+        height: 29px !important;
+        width: auto !important;
+        transform: none !important;
+        margin: auto !important;
+    }
+}
+
+@media (max-width: 820px) {
+    .whatsappWrapper {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .whatsappWrapper img {
+        height: 24px !important;
+        width: auto !important;
+        transform: none !important;
+        margin: auto !important;
+    }
+}
+
+
+

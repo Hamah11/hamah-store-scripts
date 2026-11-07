@@ -1,0 +1,7 @@
+/* 1. TOP GOV BAR: now rendered by theme JS (hv=7+). Old CSS bar removed 2026-11-07. */
+header, #ntheader, .kalles-section-header_banner, #kalles-section-header_banner { position: relative !important; display: flex !important; flex-direction: column !important; height: auto !important; }
+@media (max-width: 768px) {
+    #nt_menu_canvas { z-index: 999999 !important; background-color: rgba(255, 255, 255, 0.98) !important; }
+    #nt_menu_canvas .nt_mb_menu, #nt_menu_canvas .menu-item, #nt_menu_canvas a { position: relative !important; z-index: 999999 !important; }
+}
+
