@@ -12,3 +12,6 @@ https://media.zid.store/static/a2fcf162-43b5-476a-bdf9-09216baee072/aeff3d80-0a4
 صفحة المنتج umrah-badal-share هي المنتج رقم 5988b9d4-f3fc-4918-8ddb-7b79aa7ccd6c.
 
 `voice-record.js` نسخة مطابقة.
+
+## Zid limit
+Zid rejects theme JS over 20KB. hv=7 is 20190 bytes. Arabic text uses hzA() compact form (char code minus 1504). See project doc hamah/24.
