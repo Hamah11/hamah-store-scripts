@@ -60,7 +60,7 @@ e.style.borderRadius=(bg==='rgb(245, 248, 253)')?'18px 18px 0px 0px':r+'px';
 }
 var n=0;var iv=setInterval(function(){n++;try{rad();}catch(e){}if(n===6)clearInterval(iv);},800);
 })();
-var hv=7;
+var hv=8;
 (function(){
 if(document.URL.indexOf('media-center')===-1)return;
 var P='https:'+'/'+'/';
@@ -127,7 +127,7 @@ head.appendChild(el('p','hg-title',hzA('ehbY QSej JGHY dLgI CgdjI eSLdI HGdeedcI
 var btn=el('button','hg-btn');btn.type='button';btn.setAttribute('aria-expanded','false');btn.appendChild(el('span','',(hzA('cja JJMbb')+'\u061f')));btn.appendChild(el('i'));head.appendChild(btn);
 function box(ic,title,tspan,p){var b=el('div','hg-box');var w=el('div','hg-ic');var i=el('i');i.style.setProperty('--ic','url("'+ic+'")');w.appendChild(i);b.appendChild(w);var d=el('div');var h=el('h4','',title);if(tspan){var sp=el('span','',tspan);sp.setAttribute('dir','ltr');h.appendChild(sp);}d.appendChild(h);d.appendChild(el('p','',p));b.appendChild(d);return b;}
 var grid=el('div','hg-grid');
-grid.appendChild(box(LINK,hzA('QhGHW GdehGbY GdQSejI GdehKhbI JfJgj HfWGb eSLd QSejkG eKd '),'.sa',(hzA('JCcO Cf QGHW GdehbY GdPj JJHQY ajg jfJgj H` ')+'hamh'+'.s'+'a'+hzA(' bHd EONGd Cj HjGfGJ.'))));
+grid.appendChild(box(LINK,hzA('QhGHW GdehGbY GdQSejI GdehKhbI JfJgj HfWGb eSLd QSejkG eKd '),'.sa',(hzA('JCcO Cf QGHW GdehbY GdPj JJHQY ajg gh ')+'hamh'+'.s'+'a'+hzA(' bHd EONGd Cj HjGfGJ.'))));
 grid.appendChild(box(LOCK,hzA('GdehGbY GdBefI JSJNOe HQhJhchd '),'HTTPS',hzA('JMbb OGFekG ef hLhO QeR Gdbad aj TQjW GdYfhGf dMeGjI HjGfGJc hJTajQgG.')));
 body.appendChild(grid);
 var reg=el('div','hg-reg');reg.appendChild(el('span','',hzA('GdLeYjI eSLdI dOi GdeQcR GdhWfj dJfejI GdbWGY ZjQ GdQHMj HQbe:')));var a=el('a','','1000688400');a.href='https:'+'/'+'/ncnp.gov.sa/ar';a.target='_blank';a.rel='noopener';reg.appendChild(a);body.appendChild(reg);
